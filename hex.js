@@ -233,14 +233,53 @@
 // };
 // console.log(highestSum([2, 5, 1, 0, 5, 7], [2, 3, 5, 6, 2, 1]));
 
-const replaceDivisible = (X, Y) => {
-  const check = X.map((item) => {
-    if (item % Y === 0) {
-      return "isDivisible";
-    } else {
-      return item;
-    }
+// const replaceDivisible = (X, Y) => {
+//   const check = X.map((item) => {
+//     if (item % Y === 0) {
+//       return "isDivisible";
+//     } else {
+//       return item;
+//     }
+//   });
+//   return check;
+// };
+// console.log(replaceDivisible([12, 4, 3, 6, 5], 2));
+
+// const objects = (arr) => {
+// const map = arr.map((item) => {
+//   object.create
+// })
+// }
+
+// function divisibleBy(arr, n) {
+//   let newArr = arr.filter((element, index) => {
+//     return arr.indexOf(element) === index;
+//   });
+//   let arr2 = newArr.filter((element) => {
+//     if (element % n === 0) {
+//       return element;
+//     }
+//   });
+//   return newArr;
+// }
+// console.log(divisibleBy([1, 3, 5, 6, 3, 6, 7, 4], 2));
+
+// Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
+
+// Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
+function largestOfFour(arr) {
+  const array = arr.map((item) => {
+    return Math.max(...item);
   });
-  return check;
-};
-console.log(replaceDivisible([12, 4, 3, 6, 5], 2));
+  const add = array.reduce((a, b) => a + b);
+  return add;
+}
+
+console.log(
+  largestOfFour([
+    [4, 5, 1, 3],
+    [13, 27, 18, 26],
+    [32, 35, 37, 39],
+    [1000, 1001, 857, 1],
+  ])
+);
