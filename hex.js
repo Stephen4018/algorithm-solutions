@@ -267,19 +267,57 @@
 // Return an array consisting of the largest number from each provided sub-array. For simplicity, the provided array will contain exactly 4 sub-arrays.
 
 // Remember, you can iterate through an array with a simple for loop, and access each member with array syntax arr[i].
-function largestOfFour(arr) {
-  const array = arr.map((item) => {
-    return Math.max(...item);
-  });
-  const add = array.reduce((a, b) => a + b);
-  return add;
-}
+// function largestOfFour(arr) {
+//   const array = arr.map((item) => {
+//     return Math.max(...item);
+//   });
+//   const add = array.reduce((a, b) => a + b);
+//   return add;
+// }
 
-console.log(
-  largestOfFour([
-    [4, 5, 1, 3],
-    [13, 27, 18, 26],
-    [32, 35, 37, 39],
-    [1000, 1001, 857, 1],
-  ])
-);
+// console.log(
+//   largestOfFour([
+//     [4, 5, 1, 3],
+//     [13, 27, 18, 26],
+//     [32, 35, 37, 39],
+//     [1000, 1001, 857, 1],
+//   ])
+// );
+
+// findLongestWordLength("The quick brown fox jumped over the lazy dog") should return 6.
+
+// function findLongestWordLength(str) {
+//   const string = str.split(" ").map((item) => {
+//     return item.length;
+//   });
+//   return Math.max(...string);
+// }
+
+// console.log(
+//   findLongestWordLength("The quick brown fox jumped over the lazy dog")
+// );
+
+// An ATM only has 100, 50, 20 Naira bills (NGN) available to be dispensed.
+// Given an amount between 40 and 10000 Naira (inclusive) rounded to the nearest 10 and assuming that the ATM wants to use as few bills as possible. Write a function that returns the minimal number of 100, 50 and 20 Naira bills the ATM needs to dispense (in that order) in an array.
+// For example…
+// withdraw(amount)
+// withdraw(250) to return [2,1,0]
+// withdraw(370) to return [3,1,1]
+
+// const withdraw = (amount) => {
+//   const array = [];
+//   const round = Math.floor(amount / 100);
+//   array.push(round);
+
+//   let remains = amount - round * 100;
+
+//   const round2 = Math.floor(remains / 50);
+//   array.push(round2);
+
+//   let remains2 = amount - (round * 100 + round2 * 50);
+
+//   const round3 = Math.floor(remains2 / 20);
+//   array.push(round3);
+//   return array;
+// };
+// console.log(withdraw(500));
