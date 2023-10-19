@@ -57,3 +57,11 @@ p.innerHTML = "for all the times";
 div.append(p);
 
 btn2.setAttribute("class", "btn");
+
+const data = (e) => {
+  const my = e.target.value;
+  console.log(my);
+};
+const input = document.querySelector(".input");
+
+input.addEventListener("keydown", data);
