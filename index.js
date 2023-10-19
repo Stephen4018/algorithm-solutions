@@ -15,7 +15,7 @@ const color = document.querySelector(".color");
 
 btn.addEventListener("click", function () {
   const getrandomNumber = randomNumber();
-  //   console.log(getrandomNumber);
+  console.log(getrandomNumber);
 
   document.body.style.backgroundColor = colorChange[getrandomNumber * 0.01];
   color.textContent = colorChange[getrandomNumber];
