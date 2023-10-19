@@ -6,6 +6,7 @@ const colorChange = [
   "rgb(0,100,0)",
   "rgb(20,128,0)",
   "rgb(10,128,100)",
+  "rgb(20,128,100)",
 ];
 
 const btn = document.getElementById("btn-click");
@@ -16,7 +17,7 @@ btn.addEventListener("click", function () {
   const getrandomNumber = randomNumber();
   //   console.log(getrandomNumber);
 
-  document.body.style.backgroundColor = colorChange[getrandomNumber];
+  document.body.style.backgroundColor = colorChange[getrandomNumber * 0.01];
   color.textContent = colorChange[getrandomNumber];
 });
 
